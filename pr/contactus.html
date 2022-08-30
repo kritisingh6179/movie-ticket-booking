@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<script>
+function validate()
+{
+
+if(document.getElementById("i1").value=="")
+{ 
+alert("Please provide your name!!");
+document.getElementById("i1").focus();
+return false;
+}
+if(document.getElementById("i2").value=="")
+{ 
+alert("please provide your email!!");
+document.getElementById("i2").focus();
+return false;
+}
+if(document.getElementById("i3").value=="")
+{ 
+alert("please provide your message!!");
+document.getElementById("i3").focus();
+return false;
+}
+var a=confirm("Do you want to continue");
+if(a==true)
+{
+document.write("Submitted successfully");
+return true;
+}
+else
+{
+document.write("Cancelled");
+return false;
+}
+}
+
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+#myHeader{
+  
+  color: black;
+  padding: 40px;
+  text-align: center;
+ background-color: grey;
+position:absolute;
+top: 10px;
+box-shadow:0 0 20px 9px #ff61241f;
+border:2px solid black;
+  color: black;
+ 
+} 
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: brown;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background: url(t1.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-info{
+  color: #fff;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info i{
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.contact-form{
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+  flex: 1;
+}
+
+.contact-form h2{
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn{
+  float: right;
+  background: #2E94E3;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+.contact-form .send-btn:hover{
+  background: #0582E3;
+}
+
+@media screen and (max-width: 950px){
+  .contact-section{
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form{
+    margin: 30px 50px;
+  }
+
+  .contact-form h2{
+    font-size: 30px;
+  }
+
+  .contact-form .text-box{
+    width: 100%;
+  }
+}
+
+
+</style>
+
+  </head>
+  <body>
+<h1 id="myHeader">
+
+<a href="projectcse326main.htm" > Home </a>&nbsp&nbsp&nbsp<a href="cse3262.htm" > About</a>&nbsp&nbsp&nbsp<a href="login.html" > Logout</a>
+
+</h1>
+    <!--alert messages start
+    <div class="alert-success">
+      <span>Message Sent! Thank you for contacting us.</span>
+    </div>
+    <div class="alert-error">
+      <span>Something went wrong! Please try again.</span>
+    </div>
+    alert messages end-->
+
+    <!--contact section start-->
+    <div class="contact-section">
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i><a href="https://www.google.com/maps/place/Delhi/@28.6466773,76.813073,10z/data=!3m1!4b1!4m5!3m4!1s0x390cfd5b347eb62d:0x37205b715389640!8m2!3d28.7040592!4d77.1024902">Delhi,India</a></div>
+        <div><i class="fas fa-envelope"></i><a href="mailto:abc@gmail.com">contact@gmail.com</a></div>
+        <div><i class="fas fa-phone"></i><a href="tel:+00 0000 000 0000">+00 0000 000 000</a></div>
+        <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form class="contact" onsubmit="return(validate())" >
+          <input type="text" id="i1" name="name" class="text-box" placeholder="Your Name" >
+          <input type="email"  id="i2" name="email" class="text-box" placeholder="Your Email" >
+          <textarea name="message"  id="i3" rows="5" placeholder="Your Message" ></textarea>
+          <input type="submit" id="i4" name="submit" class="send-btn" value="Send">
+
+        </form>
+      </div>
+    </div>
+    <!--contact section end-->
+
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN FORM</title>
+<style>
+{
+margin:0;
+padding:0;
+font-family:san-serif;
+}
+.hero
+{
+height:100%;
+width:100%;
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(t2.jfif);
+background-position:center;
+background-size:cover;
+position:absolute;
+}
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: brown;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+.form-box
+{
+width:380px;
+height:450px;
+position:relative;
+margin:6% auto;
+background:#fff;
+background-position:center;
+background-size:cover;
+padding:10px;
+border:5px solid black;
+}
+
+.check-box
+{
+margin:30px 10px 30px 0;
+}
+.input-field
+{
+width:100%;
+padding:10px 0;
+margin:5px 0;
+border-left:0;
+border-right:0;
+border-top:0;
+border-bottom:1px solid #999;
+outline: none;
+background:transparent;
+}
+
+.submit-btn
+{
+color:#fff;
+margin: 5px 30px;
+height: 30px;
+width: 290px;
+background-color:#9100fd;
+border: none;
+cursor: pointer;
+}
+
+
+
+#myHeader{
+  background:linear-gradient(to right, #ff105f, #ffad06);
+position:relative;
+box-shadow:0 0 20px 9px #ff61241f;
+
+  color: black;
+  padding: 40px;
+  text-align: center;
+height:15px;
+} 
+</style>
+
+<script>
+function abc()
+{
+if(document.getElementById("t1").value=="")
+{ 
+alert("please provide your userid!!");
+document.getElementById("t1").focus();
+return false;
+}
+if(document.getElementById("t2").value=="")
+{ 
+alert("please provide your password!!");
+document.getElementById("t2").focus();
+return false;
+}
+if(document.getElementById("t2").value.length<8)
+{ 
+alert("password must contain atleast 8 digits!!");
+document.getElementById("t2").focus();
+return false;
+}
+
+}
+</script>
+<script>
+{
+function myfunction(x){
+x.style.background="#e2f3f5";
+}
+
+}
+</script>
+</head>
+<body>
+<div class="hero">
+<div class="form-box">
+<h1 id="myHeader">LOGIN</h1>
+
+<form name="myform" onsubmit="return(abc())" action="projectcse326main.htm" id="login"  >
+<input type="text" onfocus="myfunction(this)"  name="userid" id="t1" class="input-field" placeholder="User Id" >
+<input type="password" onfocus="myfunction(this)" name="password"id="t2"class="input-field"  placeholder="Enter password" >
+<input type="checkbox" class="check-box">Remember password
+<button type="submit" class="submit-btn" >LOGIN</button>
+<center><p> <a href="lost.htm">LOST PASSWORD?</a><center></p>
+<center><p>Not a Bookmyshow user? then <a href="registration.htm">REGISTER</a><center></p>
+</form>
+
+
+</div>
+</div>
+</style>
+
+</body>
+</html>
